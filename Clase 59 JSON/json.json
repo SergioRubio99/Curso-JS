@@ -1,0 +1,13 @@
+ {
+     "string": "Sergio",
+     "number": "35",
+     "boolean": "true",
+     "array": "[run, jump,swim, lift weights]",
+     "object": {
+         "twitter": "@netcoder",
+         "email": "legacyentertainmentyt@gmail.com"
+     },
+     "nulo": null
+ }
+
+ { "string": "Sergio", "number": 35, "boolean": true, "array": ["run", "jump", "swim", "lift weights"], "object": { "twitter": "@netcoder", "email": "legacyentertainmentyt@gmail.com" }, "nulo": null }
