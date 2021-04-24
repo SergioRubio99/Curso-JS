@@ -834,12 +834,25 @@ factorial(8)
 
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
+/*
+
+function prime(num) {
 
 
+    if (num === 2) {
+        console.log("Es primo", num % num)
+    } else if (num % 2 === 0) {
+        console.log("No es primo")
+    } else {
+        console.log("Es primo", num % num)
+    }
 
 
+}
 
+prime(9973);
 
+*/
 
 
 
