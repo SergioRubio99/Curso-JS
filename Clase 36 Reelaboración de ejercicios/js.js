@@ -755,11 +755,16 @@ console.log(revArr)
 
 function factorial(n) {
 
+    e = 1
+    for (i = 1; i <= n; i++) {
+        e *= i
 
-    for (i = n; i > 0; i--) {
-        e *= n
-        console.log(e)
     }
+    console.log(`
+                
+                El factorial del número introducido es ${e}
+
+        `);
 }
 
-factorial(5);
+factorial(8)
