@@ -832,12 +832,95 @@ factorial(8)
 
 
 
-
-
-
-
-
-
-
-
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+
+
+/*
+
+
+function even_uneven(num) {
+    let regEx = /[0-9]/
+    let wholeRegEx = /./ig
+    let spcRegEx = /\s/ig
+
+
+    if (wholeRegEx.test(num) === false || spcRegEx.test(num) === true || num === undefined) {
+        console.log("Input something, mothafucka")
+
+    } else if (isNaN(num) === true && regEx.test(num) === false) {
+        console.log("Input only a number")
+    } else {
+        let a = num % 2 === 0 ?
+            "Es un número par" :
+            "Es un número impar"
+        console.log(a);
+
+    }
+
+}
+
+even_uneven(12);
+
+
+*/
