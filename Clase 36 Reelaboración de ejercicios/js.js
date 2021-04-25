@@ -834,25 +834,48 @@ factorial(8)
 
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
-/*
+
 
 function prime(num) {
+    let nReg = /[0-9]/ig
 
-
-    if (num === 2) {
-        console.log("Es primo", num % num)
-    } else if (num % 2 === 0) {
-        console.log("No es primo")
-    } else {
-        console.log("Es primo", num % num)
+    if (nReg.test(num) === false || Math.sign(num) === -1) {
+        console.log("Input a positive number")
+    } else if (num === 1 || num === 2) {
+        console.log("Primo")
+    } else if (num === 0) {
+        console.log("0 is not a prime number")
     }
 
+    arr = []
+
+    for (i = 2; i <= num; i++) {
+        let a = num % i
+        arr.push(a)
+        console.log(a)
+        console.log(arr)
+    }
+
+    sArr = []
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            sArr.push(arr[i])
+        }
+    }
+
+    console.log("arr", arr)
+    console.log("sArr", sArr)
+    if (sArr.length === arr.length - 1) {
+        console.log("Prime num")
+    } else {
+        console.log("Not a prime num")
+    }
 
 }
 
-prime(9973);
+prime(10321);
 
-*/
+
 
 
 
