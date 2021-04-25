@@ -835,7 +835,7 @@ factorial(8)
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
 
-
+/* 
 function prime(num) {
     let nReg = /[0-9]/ig
 
@@ -873,17 +873,37 @@ function prime(num) {
 
 }
 
-prime(10321);
+prime(52343);
+
+*/
 
 
 
+/*Forma más eficiente de programarlo:*/
 
 
+/*
+function ifPrime(num) {
+
+    let a = false;
+
+    for (let i = 2; i < num; i++) {
+        if ((num % i) === 0) {
+            a = true;
+            break;
+        }
+    }
+
+    return (a) ?
+        console.log(`${num} is not a prime number`) :
+        console.log(`${num} is a prime number`)
 
 
+}
 
+ifPrime(512343)
 
-
+*/
 
 
 
@@ -952,3 +972,51 @@ even_uneven(12);
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
