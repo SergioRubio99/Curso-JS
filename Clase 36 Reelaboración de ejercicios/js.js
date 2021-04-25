@@ -14,7 +14,11 @@
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 // 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
+// En el video 39 te daré mi solución, antes de verlo trata de resolver los ejercicios, y comparte tus resultados en alguna plataforma como GitHub o CodePen y comparte el enlace de tus soluciones en los comentarios de este video. 
 
 
 
@@ -1020,3 +1024,80 @@ even_uneven(12);
 
 
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+/* Switching from Celsius to Fahrenheit: ºF = (ºC · 1,8) + 32 
+
+Switching from Fahrenheit to Celsius: ºC = (ºF -32) / 1,8
+
+*/
+
+
+/*
+
+function CtoF(a, b) {
+
+
+
+    if (b === "C") {
+        let f = a * 1.8 + 32;
+        console.log(`${a} Celsius degrees equal ${f} Fahrenheit degrees`)
+    }
+    if (b === "F") {
+        let c = (a - 32) / 1.8;
+        console.log(`${a} Fahrenheit degrees equal ${c} Celsius degrees`)
+    }
+
+}
+
+CtoF(86, "D")
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
