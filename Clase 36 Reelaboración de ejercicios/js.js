@@ -18,7 +18,42 @@
 // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
-// En el video 39 te daré mi solución, antes de verlo trata de resolver los ejercicios, y comparte tus resultados en alguna plataforma como GitHub o CodePen y comparte el enlace de tus soluciones en los comentarios de este video. 
+// 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+// 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+// 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+// 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+// 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+// 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+
+// La expresión regular que uso para el email en este video /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
+
+// 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+// 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+// 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
+// 27) Programa una clase llamada Pelicula.
+
+// La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+//   - Todos los datos del objeto son obligatorios.
+//   - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+//      7 restantes números.
+//   - Valida que el título no rebase los 100 caracteres.
+//   - Valida que el director no rebase los 50 caracteres.
+//   - Valida que el año de estreno sea un número entero de 4 dígitos.
+//   - Valida que el país o paises sea introducidos en forma de arreglo.
+//   - Valida que los géneros sean introducidos en forma de arreglo.
+//   - Valida que los géneros introducidos esten dentro de los géneros 
+//      aceptados*.
+//   - Crea un método estático que devuelva los géneros aceptados*.
+//   - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+//     decimal de una posición.
+//   - Crea un método que devuelva toda la ficha técnica de la película.
+//   - Apartir de un arreglo con la información de 3 películas genera 3 
+//     instancias de la clase de forma automatizada e imprime la ficha técnica 
+//     de cada película.
+
+// * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 
 
 
@@ -1147,7 +1182,7 @@ CtoF(222, "f");
 
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 
-
+/*
 function convert(num, type) {
 
     regExp = /[0-9]/ig
@@ -1160,20 +1195,20 @@ function convert(num, type) {
         return console.log("Input a number and its nature (2 for decimal, 10 for binary)");
     } else if (type === 2) {
 
-        let arr = []
+        // let arr = []
         let binArr = []
         let b = num
         for (i = 0; i < num; i++) {
 
-            arr.push(b / 2);
+            // arr.push(b / 2);
             binArr.push(Math.floor(b % 2));
-            console.log(arr);
-            console.log(binArr);
+            // console.log(arr);
+            // console.log(binArr);
 
             // console.log(b)
             b /= 2
 
-            if (b < 0.9999) {
+            if (b < 1) {
                 break
             }
 
@@ -1181,38 +1216,35 @@ function convert(num, type) {
         console.log(`result: ${binArr.reverse()}`)
 
     } else if (kind = 10) {
-        powArr = []
-        console.log(num.length);
-        a = parseInt(num);
-        console.log(a);
+
+        // console.log(num.length);
 
 
 
-        lastPow = 1
-        arr = num.split("")
+        binArr = num.split("")
         arr2 = []
         arr3 = []
-        arrR = arr.reverse()
+        arrR = binArr.reverse()
+        powX = 1
         finalResult = 0
 
-        for (i = 0; i < arr.length; i++) {
-            arr2.push(lastPow)
-            lastPow *= 2
-                // console.log("last pow:", lastPow)
+        for (i = 0; i < binArr.length; i++) {
+            arr2.push(powX)
+            powX *= 2
+                // console.log("last pow:", powX)
             if (arrR[i] == "1") {
-                console.log("arr2[i]", arr2[i])
+                // console.log(`${arr2[i]}`, arr2[i])
                 arr3.push(arr2[i])
                 finalResult += arr2[i]
 
             }
         }
 
-        //Warning! the execution of the reverse() method overwrites the original array, even if you store it into a new variabl:
-
-        arrEx = [0, 1, 2, 1, 6, 10]
-        arrEx2 = arrEx.reverse()
-        console.log("Fucking array", arrEx2)
-        console.log("Fucking array", arrEx)
+        //Warning! the execution of the reverse() method overwrites the original array, even if you store it into a new variable:
+        // arrEx = [0, 1, 2, 1, 6, 10]
+        // arrEx2 = arrEx.reverse()
+        // console.log("Fucking array", arrEx2)
+        // console.log("Fucking array", arrEx)
 
         //The code above returns the same output.
 
@@ -1223,20 +1255,27 @@ function convert(num, type) {
 
 
 
-        console.log(lastPow)
-        console.log("arr: ", arr)
+        console.log(powX)
+        console.log("arr: ", binArr)
         console.log(`arr: 2`, arr2)
         console.log("arr 3:", arr3)
         console.log("Final result: ", finalResult)
-            // console.log(c)
 
+        // console.log(c)
+
+        //An alternative method that I could have used here is array.reduce, to sum all the elements of the powers array, arr2, like here: 
+
+        // var finalSum = result.reduce((a, b) => a + b, 0)
+        // console.log(`${finalSum}`)
     }
+
 
 
 
 }
 
-convert("101000011010100101110", 10)
+convert("101010101", 10)
+*/
 
 
 
@@ -1269,4 +1308,39 @@ convert("101000011010100101110", 10)
 
 
 
-// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
