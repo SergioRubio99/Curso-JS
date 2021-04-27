@@ -1179,7 +1179,7 @@ function convert(num, type) {
         }
         console.log(`result: ${binArr.reverse()}`)
 
-    } else if (kind = 11) {
+    } else if (kind = 10) {
 
     }
 
