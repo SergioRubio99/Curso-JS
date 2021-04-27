@@ -1147,8 +1147,31 @@ CtoF(222, "f");
 
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 
+function bin2dec(num) {
 
+    let arr = []
+    let binArr = []
+    let b = num
+    for (i = 0; i < num; i++) {
 
+        arr.push(b / 2);
+        binArr.push(Math.floor(b % 2));
+        console.log(arr);
+        console.log(binArr);
+
+        // console.log(b)
+        b /= 2
+
+        if (b < 0.9999) {
+            break
+        }
+
+    }
+    console.log(`result: ${binArr.reverse()}`)
+
+}
+
+bin2dec(7910);
 
 
 
