@@ -1147,6 +1147,7 @@ CtoF(222, "f");
 
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 
+
 function convert(num, type) {
 
     regExp = /[0-9]/ig
@@ -1180,6 +1181,54 @@ function convert(num, type) {
         console.log(`result: ${binArr.reverse()}`)
 
     } else if (kind = 10) {
+        powArr = []
+        console.log(num.length);
+        a = parseInt(num);
+        console.log(a);
+
+
+
+        lastPow = 1
+        arr = num.split("")
+        arr2 = []
+        arr3 = []
+        arrR = arr.reverse()
+        finalResult = 0
+
+        for (i = 0; i < arr.length; i++) {
+            arr2.push(lastPow)
+            lastPow *= 2
+                // console.log("last pow:", lastPow)
+            if (arrR[i] == "1") {
+                console.log("arr2[i]", arr2[i])
+                arr3.push(arr2[i])
+                finalResult += arr2[i]
+
+            }
+        }
+
+        //Warning! the execution of the reverse() method overwrites the original array, even if you store it into a new variabl:
+
+        arrEx = [0, 1, 2, 1, 6, 10]
+        arrEx2 = arrEx.reverse()
+        console.log("Fucking array", arrEx2)
+        console.log("Fucking array", arrEx)
+
+        //The code above returns the same output.
+
+
+
+
+
+
+
+
+        console.log(lastPow)
+        console.log("arr: ", arr)
+        console.log(`arr: 2`, arr2)
+        console.log("arr 3:", arr3)
+        console.log("Final result: ", finalResult)
+            // console.log(c)
 
     }
 
@@ -1187,7 +1236,7 @@ function convert(num, type) {
 
 }
 
-convert("10", 2)
+convert("101000011010100101110", 10)
 
 
 
