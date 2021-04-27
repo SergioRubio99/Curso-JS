@@ -1023,33 +1023,58 @@ even_uneven(12);
 
 
 
+/*
 // 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
 
-/* Switching from Celsius to Fahrenheit: ºF = (ºC · 1,8) + 32 
+//  Switching from Celsius to Fahrenheit: ºF = (ºC · 1,8) + 32 
 
-Switching from Fahrenheit to Celsius: ºC = (ºF -32) / 1,8
-
-*/
+// Switching from Fahrenheit to Celsius: ºC = (ºF -32) / 1,8
 
 
-/*
+
+
+
+let wholeRegEx = /[A-z]/ig;
+let spcRegEx = /\s/ig;
+let empRegEx = /./
+let numRegEx = /[0-9]/
+let fC = /[FCfc]/ig
 
 function CtoF(a, b) {
 
-
-
-    if (b === "C") {
-        let f = a * 1.8 + 32;
-        console.log(`${a} Celsius degrees equal ${f} Fahrenheit degrees`)
+    if ((a === undefined || b === undefined)) {
+        return console.log("Input a number and the kind of degrees it represents");
+    } else if (isNaN(a) === false && b === undefined) {
+        return console.log("Input the sort of degree you want to convert");
+    } else if (fC.test(a) === true && b === undefined) {
+        return console.log("Input a number, please");
+    } else if (spcRegEx.test(a) === true || spcRegEx.test(b) === true) {
+        return console.log("Don't input empty spaces")
+    } else if (fC.test(a) === true && numRegEx.test(b) === false) {
+        return console.log("Input numbers first")
+    } else if (fC.test(b) === false) {
+        return console.log("Input the degrees first, then what type of degrees they are (F/C).")
     }
-    if (b === "F") {
-        let c = (a - 32) / 1.8;
-        console.log(`${a} Fahrenheit degrees equal ${c} Celsius degrees`)
+
+
+    let num = parseInt(a)
+
+
+
+
+
+    if (b === "C" || b === "c") {
+        let f = num * 1.8 + 32;
+        return console.log(`${num} Celsius degrees equal ${f} Fahrenheit degrees`);
+    }
+    if (b === "F" || b === "f") {
+        let c = (num - 32) / 1.8;
+        return console.log(`${num} Fahrenheit degrees equal ${c} Celsius degrees`);
     }
 
 }
 
-CtoF(86, "D")
+CtoF(222, "f");
 
 */
 
@@ -1062,6 +1087,65 @@ CtoF(86, "D")
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 
 
 
