@@ -513,7 +513,7 @@ FahrenheitToCelsius(240);
 //15)
 
 //Cómo pasar de binario a decimal: https://youtu.be/tFLRGHx5tnY
-/*
+
 
 function binToDec(binary) {
 
@@ -585,7 +585,7 @@ function binToDec(binary) {
 
 binToDec("1010111");
 
-*/
+
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 

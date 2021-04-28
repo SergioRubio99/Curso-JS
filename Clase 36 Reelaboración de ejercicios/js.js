@@ -1388,3 +1388,36 @@ discount(20, 1)
 
 
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+
+
+function date(dt) {
+
+    //If no Date object is inputted, it will return the typical 'this method is not a function' error. Type the method without parenthesis, and check if it's a function. If there is no function,the input is wrong, because the function exists only when the associated object is into the scope, and we're working with a Date() object.
+
+    if (typeof dt.getFullYear != 'function') {
+
+        return console.log(`Input a date!`)
+
+        // console.log(typeof dt == "string")
+
+    } else if (dt === undefined) {
+
+        return console.log(`Input something`)
+
+    } else {
+        let a = new Date();
+        let y = dt.getFullYear();
+        let c = a.getFullYear();
+        console.log(y);
+        console.log(a);
+        console.log(c);
+
+        console.log(`${c-y} years have passed since the date you've inputted`)
+
+
+    }
+
+    //Podría validar que no se introduzca un Date objecto con más de 3 caracteres (año, mes y día), y que se haga correctamente.
+}
+
+date(new Date(1984, 12, 30))
