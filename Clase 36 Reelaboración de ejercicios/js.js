@@ -1344,3 +1344,47 @@ convert("101010101", 10)
 
 
 // 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+
+
+
+// 20% de 60 = (20 x 60) / 100 = 12 
+
+
+/*
+
+function discount(num, dis) {
+    regEx = /\s/
+    regEx1 = /./
+    regEx2 = /[A-z]/
+    regEx3 = /[0-9]/
+
+    if (num === undefined || dis === undefined) {
+        return console.log("Please, input both values");
+    } else if (isNaN(dis) === true || isNaN(num)) {
+        return console.log("Input only numbers");
+    } else if (dis > 100) {
+        return console.log("The discount cannot be superior to the 100% of the cost of the product")
+    }
+
+
+
+
+    let a = (dis * num) / 100
+    console.log(`The final price is: ${num-a}$`)
+}
+
+discount(20, 1)
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+// 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
