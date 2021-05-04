@@ -1735,3 +1735,34 @@ checkName("Sergio Rubio ");
 
 
 // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+
+function email(email) {
+    const a = /./
+    if (email === undefined || typeof email != "string") {
+        return console.warn("Input a string with an email in it")
+    } else if (a.test(email) === false) {
+        return console.warn("Don't imput an empty string")
+    }
+
+    const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    const regEx2 = /\s/
+
+    const regEx3 = /[-! " # $ % & ' ( ) * +,  / :;= ? [ ^ _ ` { | } ~ ]/
+
+
+
+    if (regEx2.test(email) === true) {
+        return console.warn("Don't input blank spaces");
+    } else if (regEx3.test(email) === true) {
+        return console.warn("Input only @ . and A-z")
+    } else if (regEx.test(email) === true) {
+        return console.log("Valid email!");
+    }
+
+}
+
+
+
+email("")
