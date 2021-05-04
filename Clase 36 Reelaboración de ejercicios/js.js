@@ -1387,12 +1387,69 @@ discount(20, 1)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
-
+/*
 function date(dt) {
 
-    //If no Date object is inputted, it will return the typical 'this method is not a function' error. Type the method without parenthesis, and check if it's a function. If there is no function,the input is wrong, because the function exists only when the associated object is into the scope, and we're working with a Date() object.
+    //If no Date object is inputted, it will return the typical 'this method is not a function' error. Type the method without parenthesis, and check if it's a function. If there is no function, the input is wrong, because the function exists only when the associated object is into the scope, and we're working with a Date() object.
 
     if (typeof dt.getFullYear != 'function') {
 
@@ -1417,7 +1474,154 @@ function date(dt) {
 
     }
 
-    //Podría validar que no se introduzca un Date objecto con más de 3 caracteres (año, mes y día), y que se haga correctamente.
 }
 
 date(new Date(1984, 12, 30))
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+
+/*
+function vowelOrCons(str) {
+
+
+    let a = 0
+    let b = 0
+    let arr = str.split("")
+
+    for (i = 0; i <= arr.length; i++) {
+        if (arr[i] === "a" || arr[i] === "e" || arr[i] === "i" || arr[i] === "o" || arr[i] === "u") {
+            a++
+        } else {
+            b++
+        }
+
+        if (arr[i] === " ") {
+            b--
+        }
+    }
+
+
+
+    console.log(`The string has ${a} vowels`)
+    console.log(`The string has ${b-1} consonants`)
+    console.log(arr)
+}
+
+vowelOrCons("Hola mundo Z aaa N");
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
