@@ -1737,6 +1737,7 @@ checkName("Sergio Rubio ");
 // 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
 
 
+/*
 function email(email) {
     const a = /./
     if (email === undefined || typeof email != "string") {
@@ -1766,3 +1767,160 @@ function email(email) {
 
 
 email("")
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+
+//Reminder: when we execute a self invoking anonymous function, the values it returns go straight to the general scope, and the function itself is discarded. 
+
+
+
+
+/*
+(function(arr) {
+
+    if (arr === undefined) {
+        return console.warn("Input an array")
+    } else if (isNaN(arr[0]) === true) {
+        return console.warn("Input an array")
+    } else {
+
+        //One last validation, over each element of the array:
+
+        for (i = 0; i < arr.length; i++) {
+            if (typeof arr[i] != "number") {
+                return console.warn("All the elements of the array must be numbers")
+            }
+        }
+
+
+        arr2 = []
+        for (i = 0; i < arr.length; i++) {
+
+            arr2.push(arr[i] * arr[i])
+
+        }
+        console.log(arr)
+        console.log(arr2)
+    }
+})
+
+([1, 4, 5]);
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
