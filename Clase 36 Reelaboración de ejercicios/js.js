@@ -1625,3 +1625,113 @@ vowelOrCons("Hola mundo Z aaa N");
 
 
 // 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+
+/*
+function checkName(str) {
+    regEx = /\s/
+    regEx2 = /[A-Za-z]/
+    if (typeof str != "string" || isNaN(str) === false) {
+        console.warn("Introduce a string")
+    } else if (str.length > 30) {
+        console.warn("Don't input a string that is too long")
+    } else if (regEx.test(str) === false) {
+        console.warn("The name must contain a blank space")
+    }
+
+    let arr = str.split("");
+
+    for (i = 0; i <= str.length; i++) {
+
+        if (regEx2.test(arr[i]) === false && arr[i] != " " && arr[i] != "-" && arr[i] != "á" && arr[i] != "é" && arr[i] != "í" && arr[i] != "ó" && arr[i] != "ú" && arr[i] != "ñ" && arr[i] != "Á" && arr[i] != "É" && arr[i] != "Í" && arr[i] != "Ó" && arr[i] != "Ú" && arr[i] != "Ñ" && arr[i] != "ñ") {
+            console.warn("Input only latin characters")
+        }
+    }
+
+    let a = 0
+
+
+    for (i = 0; i < str.length; i++) {
+        if (arr[i] === " ") {
+            a++
+        }
+        if (a > 3) {
+            console.warn("Don't input more than 3 spaces")
+        }
+    }
+
+
+
+
+
+}
+
+checkName("Sergio Rubio ");
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
