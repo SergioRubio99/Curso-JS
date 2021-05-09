@@ -1924,3 +1924,27 @@ email("")
 
 
 // 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+
+
+(function(arr) {
+
+    let a = 0
+    let b = 0
+
+
+
+    for (i = 0; i <= arr.length; i++) {
+
+        //the filter method allows us to apply a condition to all the elements of the array.
+
+        const nArr = arr.filter(x => x > arr[i])
+
+
+        if (nArr[1] === undefined) {
+            return console.log(nArr[0])
+        }
+    }
+
+
+})([1, 120, 4, 5, 199, -60, 2002]);
