@@ -1926,25 +1926,42 @@ email("")
 // 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
 
 
-
 (function(arr) {
+    function bigger(arr) {
+        for (i = 0; i <= arr.length; i++) {
 
-    let a = 0
-    let b = 0
+            //the filter method allows us to apply a condition to all the elements of the array.
 
+            let nArr = arr.filter(x => x > arr[i])
 
+            if (nArr[1] === undefined) {
 
-    for (i = 0; i <= arr.length; i++) {
+                return nArr[0]
+            }
 
-        //the filter method allows us to apply a condition to all the elements of the array.
-
-        const nArr = arr.filter(x => x > arr[i])
-
-
-        if (nArr[1] === undefined) {
-            return console.log(nArr[0])
         }
     }
 
+    var a = bigger(arr);
+    console.log(a)
 
-})([1, 120, 4, 5, 199, -60, 2002]);
+    function lesser(arr) {
+        for (i = 0; i < arr.length; i++) {
+            let nArr = arr.filter(x => x <= arr[i])
+
+
+            if (nArr[1] === undefined) {
+
+                return nArr[0]
+            }
+        }
+    }
+
+    var b = lesser(arr);
+    console.log(b);
+
+
+    return console.log(`The lesser number of your array is ${b}, and the bigger ${a}.`)
+
+
+})([1, 120, 4, 5, 199, -60, 50505, -3232, 17, 100202, -89, 10, 1, 2, 2002]);
