@@ -2188,23 +2188,24 @@ bigger([7, 5, 7, 8, 6])
 // 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 
 
+/* 
+let arr = ["x", 10, "x", 2, "10", 10, 10, true, true]
 
 
-
-
-/*function eliminateDuplicates(arr) {
-
+function eliminateDuplicates(arr) {
 
     const result = arr.filter((value, index, self) => self.indexOf(value) === index)
     console.log(result)
+
+
 }
 
 
 
-eliminateDuplicates(["x", 10, "x", 2, "10", 10, 10, true, true]);
-*/
+eliminateDuplicates(arr);
 
-function eliminateDuplicates(arr) {
+
+function eliminateDuplicates2(arr) {
 
 
     let result = [...new Set(arr)]
@@ -2213,4 +2214,55 @@ function eliminateDuplicates(arr) {
 
 
 
-eliminateDuplicates(["x", 10, "x", 2, "10", 10, 10, true, true]);
+eliminateDuplicates2(arr);
+
+
+//Una forma de preguntarle al programa si hay duplicados en el array: 
+
+function hasDuplicates(arr) {
+    if (arr instanceof Array) {
+        for (let i = 0; i < arr.length - 1; ++i) {
+            //console.log(i)
+            if (arr.slice(i + 1).indexOf(arr[i]) !== -1) {
+                return true;
+
+                //Con slice(index) creamos un array a partir de una posición determinada del anterior array. Luego preguntamos al programa: ¿cuál es el índice de arr[i]? Si da positivo, quiere decir que está en el nuevo array, ergo, está duplicado en el primero.
+            }
+        }
+        return false;
+    } else {
+        throw TypeError('El argumento de la función debe ser un arreglo')
+    }
+}
+
+try {
+    console.log(hasDuplicates(arr));
+} catch (e) {
+    console.log(`Error: ${e.message}`);
+}
+
+
+
+//Forma alternativa de eliminar duplicados: 
+
+
+function eDup(arr) {
+    console.log(arr)
+    if (arr instanceof Array) {
+        for (i = 0; i < arr.length - 1; i++) {
+            if (arr.slice(i + 1).indexOf(arr[i]) !== -1) {
+                arr.splice(i, 1);
+                i--;
+            }
+        }
+        return arr
+    } else {
+        throw TypeError(`El argumento debe ser un arreglo`);
+    }
+}
+
+
+console.log(eDup(arr));
+
+
+*/
