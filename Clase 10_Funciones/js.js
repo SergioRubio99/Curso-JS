@@ -34,3 +34,6 @@ const funcionExpresada = function() {
 }
 
 funcionExpresada()
+
+
+//Generator functions: https://mzl.la/3gWz6GK

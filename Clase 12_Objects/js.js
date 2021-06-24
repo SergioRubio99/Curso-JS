@@ -13,16 +13,16 @@ console.log(c);
 const sergioRubio = {
     nombre: "Sergio",
     apellido: "Rubio",
-    edad: 35,
+    edad: 21,
     pasatiempos: ["Correr", "Hacer ejercicio", "Programar"],
-    soltero: true,
+    estado: "soltero",
     contacto: {
         email: "srubiochavarria@gmail.com",
         twitter: "@example",
         tlf: "+34 655127890"
     },
     saludar: function() {
-        console.log(`Hola :)`)
+        console.log(`Hola`)
     },
     decirMiNombre: function() {
         console.log(`Hola, me llamo ${this.nombre} ${this.apellido}, y tengo ${this.edad} años. Me puedes seguir como ${this.contacto.twitter} en Twitter`)
@@ -39,7 +39,7 @@ console.log(sergioRubio["apellido"])
 console.log(sergioRubio.nombre)
 console.log(sergioRubio.apellido)
 console.log(sergioRubio.edad)
-console.log(sergioRubio.soltero)
+console.log(sergioRubio.estado)
 console.log(sergioRubio.pasatiempos)
 console.log(sergioRubio.pasatiempos[0])
 console.log(sergioRubio.contacto);

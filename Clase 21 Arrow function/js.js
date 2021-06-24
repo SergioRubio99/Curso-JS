@@ -22,7 +22,7 @@ const funcionDeVariasLineas = () => {
 funcionDeVariasLineas();
 
 const numeros = [1, 2, 3, 4, 5]
-
+    //forEach syntax: https://mzl.la/3zMwHXQ
 numeros.forEach(
     function(el, index) {
         console.log(`El elemento ${el} está en la posición ${index}`);
@@ -68,3 +68,13 @@ const perro1 = {
 perro1.ladrar();
 
 // Al llamar el THIS en la arrow function, vemos que el navegador nos muestra las características y elementos de Window. ¿Por qué, si esa función se encuentra dentro de un objeto? Esto es así debido a que las arrow function reconocen al elemento padre. Sobrepasan el contenedor en el que se encuentran. Por ello, es mejor prescindir de ellas cuando trabajemos dentro de objetos o funciones.
+
+
+const perro2 = {
+    nombre: "ryan",
+    ladrar: function() {
+        console.log(this);
+    }
+}
+
+perro2.ladrar();

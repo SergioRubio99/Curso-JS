@@ -22,3 +22,9 @@ console.log(Math.random() * 70);
 //Para redondear un nº random:
 
 console.log(Math.round(Math.random() * 900))
+
+
+//Math.max y math.min:
+
+console.log(Math.max(1, 3, 2));
+console.log(Math.min(-2, 3, 2));

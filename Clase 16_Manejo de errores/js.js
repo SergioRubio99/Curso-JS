@@ -1,23 +1,25 @@
 // try {
-//     console.log("En el try se agrega el código a evaluar");
-//     console.log("Segundo mensaje en el try");
+//     console.log("We add here the codigo to evaluate");
+//     console.log("Second try message");
 //     variableInexistente;
 // } catch (error) {
-//     console.log("Catch captura cualquier error surgido en el try")
+//     console.log("Catch captures any error emerged in Try")
 //     console.log(error);
 // } finally {
-//     console.log("El bloque finally se ejecutará al final de un bloque try-catch");
+//     console.log("The Finally block will execute after a Try Catch block, whether it throws an error or not");
 // }
 
 
 try {
-    let numero = "y";
+    let num = 4;
+    if (isNaN(num)) throw new Error("The inputted character is not a number, try again.");
 
-    if (isNaN(numero)) {
-        throw new Error("El carácter introducido no es un número, inténtelo de nuevo");
-    }
 
-    console.log(numero * numero);
+    console.log(num * num);
 } catch (error) {
-    console.log(`Se produjo el siguiente error: ${error}`);
+    console.warn(error.message);
+} finally {
+    console.log("Finally message")
 }
+
+//The Error object supports the following two properties: name and message. To display the full Error object, we can write console.warn(error), and to display one of those two properties, we can write console.warn(error.name) or console.warn(error.message).

@@ -71,24 +71,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -116,16 +99,7 @@ seize("Hola mundo");
 
 
 
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -163,18 +137,7 @@ console.log(newArr)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -229,17 +192,7 @@ if ((expReg.test(separator) === true && separator.length === 1) || expRegNot.tes
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -283,22 +236,7 @@ exec(text, times);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -346,25 +284,7 @@ reverse(str);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -428,31 +348,7 @@ if (expReg.test(str) === true) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -523,36 +419,7 @@ if (expReg.test(input) === true) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -595,27 +462,7 @@ if (expReg.test(str) === true && expReg.test(pat) === true) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -652,27 +499,7 @@ random(501, 600)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -746,43 +573,7 @@ console.log(revArr)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -825,41 +616,7 @@ factorial(8)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -952,19 +709,7 @@ ifPrime(512343)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1020,35 +765,7 @@ even_uneven(12);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1126,45 +843,7 @@ CtoF(222, "f");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1182,99 +861,74 @@ CtoF(222, "f");
 
 // 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
 
+
+
 /*
+//dec to bin: https://www.youtube.com/watch?v=8USbTNHvQik 
 function convert(num, type) {
 
-    regExp = /[0-9]/ig
-    regExp2 = /[2-9]/ig
+    num = num.toString();
+    type = type.toString();
+    //We convert the values to strings because I can't test via regEx2 the num value if it's not a string.
 
 
-    if (regExp.test(num) === false || type === undefined) {
-        return console.log("Input a number and its nature (2 for decimal, 10 for binary)");
-    } else if (type !== 2 && type !== 10) {
-        return console.log("Input a number and its nature (2 for decimal, 10 for binary)");
-    } else if (type === 2) {
-
-        // let arr = []
-        let binArr = []
-        let b = num
-        for (i = 0; i < num; i++) {
-
-            // arr.push(b / 2);
-            binArr.push(Math.floor(b % 2));
-            // console.log(arr);
-            // console.log(binArr);
-
-            // console.log(b)
-            b /= 2
-
-            if (b < 1) {
-                break
-            }
-
-        }
-        console.log(`result: ${binArr.reverse()}`)
-
-    } else if (kind = 10) {
-
-        // console.log(num.length);
-
-
-
-        binArr = num.split("")
-        arr2 = []
-        arr3 = []
-        arrR = binArr.reverse()
-        powX = 1
-        finalResult = 0
-
-        for (i = 0; i < binArr.length; i++) {
-            arr2.push(powX)
-            powX *= 2
-                // console.log("last pow:", powX)
-            if (arrR[i] == "1") {
-                // console.log(`${arr2[i]}`, arr2[i])
-                arr3.push(arr2[i])
-                finalResult += arr2[i]
-
-            }
-        }
-
-        //Warning! the execution of the reverse() method overwrites the original array, even if you store it into a new variable:
-        // arrEx = [0, 1, 2, 1, 6, 10]
-        // arrEx2 = arrEx.reverse()
-        // console.log("Fucking array", arrEx2)
-        // console.log("Fucking array", arrEx)
-
-        //The code above returns the same output.
-
-
-
-
-
-
-
-
-        console.log(powX)
-        console.log("arr: ", binArr)
-        console.log(`arr: 2`, arr2)
-        console.log("arr 3:", arr3)
-        console.log("Final result: ", finalResult)
-
-        // console.log(c)
-
-        //An alternative method that I could have used here is array.reduce, to sum all the elements of the powers array, arr2, like here: 
-
-        // var finalSum = result.reduce((a, b) => a + b, 0)
-        // console.log(`${finalSum}`)
+    let regEx1 = /^[0-9]*$/ //this regex means matching only numbers and nothing else. 
+    let regEx2 = /[2-9]/
+    if (regEx1.test(num) === false) {
+        return console.log("Input a correct value as number");
+    } else if (regEx1.test(type) === false || (type != 2 && type != 10 && type != "2" && type != "10")) {
+        return console.log("the base must be 2 or 10");
+    } else if ((type === 2 || type === "2") && regEx2.test(num) === true) {
+        console.log("If the base is 2, you must input a binary number", num);
     }
 
 
+    if (type == 10) {
+        arr = []
+            // arr2 = []
+        let a = num //We create this variable for the for loop, because if we iterate on the "num" variable, and manage it inside the loop at the same time, the "i" variable won´t make any sense and the loop won't iterate the times needed. 
+        for (i = 0; i < a; ++i) {
 
+            arr.push(Math.floor(num % 2))
+                // arr2.push(Math.floor(num / 2))
+            num = Math.floor(num / 2)
+
+            if (num < 1) {
+                break
+            }
+        }
+
+        console.log(`This is the decimal number made binary: ${arr.reverse()}`)
+    }
+
+    //bin to dec: https://youtu.be/CUr74ebGWT8
+
+    if (type == 2) {
+
+        arr = []
+        arr2 = []
+        arr3 = []
+        arr4 = []
+        for (i = 0; i < num.length; i++) {
+            arr.unshift(num[i])
+            arr2.push(Math.pow(2, i))
+        }
+
+        for (i = 0; i < num.length; i++) {
+            arr3.push(arr[i] * arr2[i])
+        }
+
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+        console.log(arr);
+        console.log(arr2)
+        console.log(`This is the binary number made decimal: ${arr3.reduce(reducer)}`)
+    }
 
 }
 
-convert("101010101", 10)
+convert(1010110101010, 2);
+
 */
 
 
@@ -1289,49 +943,7 @@ convert("101010101", 10)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1391,47 +1003,7 @@ discount(20, 1)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1498,26 +1070,7 @@ date(new Date(1984, 12, 30))
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1576,41 +1129,7 @@ vowelOrCons("Hola mundo Z aaa N");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1630,44 +1149,42 @@ vowelOrCons("Hola mundo Z aaa N");
 /*
 function checkName(str) {
     regEx = /\s/
-    regEx2 = /[A-Za-z]/
-    if (typeof str != "string" || isNaN(str) === false) {
-        console.warn("Introduce a string")
+    regEx2 = /[A-Za-zÁÉÍÓÚáéíóúñÑ]/
+    if (typeof str != "string") {
+        return console.warn("Introduce a string")
     } else if (str.length > 30) {
-        console.warn("Don't input a string that is too long")
+        return console.warn("Don't input a string that is too long")
     } else if (regEx.test(str) === false) {
-        console.warn("The name must contain a blank space")
+        return console.warn("The name must contain a blank space")
     }
 
     let arr = str.split("");
 
     for (i = 0; i <= str.length; i++) {
 
-        if (regEx2.test(arr[i]) === false && arr[i] != " " && arr[i] != "-" && arr[i] != "á" && arr[i] != "é" && arr[i] != "í" && arr[i] != "ó" && arr[i] != "ú" && arr[i] != "ñ" && arr[i] != "Á" && arr[i] != "É" && arr[i] != "Í" && arr[i] != "Ó" && arr[i] != "Ú" && arr[i] != "Ñ" && arr[i] != "ñ") {
-            console.warn("Input only latin characters")
+        if (regEx2.test(arr[i]) === false && arr[i] != " " && arr[i] != "-") {
+            return console.warn("Input only latin characters")
         }
     }
 
     let a = 0
-
 
     for (i = 0; i < str.length; i++) {
         if (arr[i] === " ") {
             a++
         }
         if (a > 3) {
-            console.warn("Don't input more than 3 spaces")
+            return console.warn("Don't input more than 3 spaces")
         }
     }
 
 
-
+    console.log("Valid name!")
 
 
 }
 
-checkName("Sergio Rubio ");
-
+checkName("Sergio Núñez  ");
 */
 
 
@@ -1680,50 +1197,7 @@ checkName("Sergio Rubio ");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1739,14 +1213,15 @@ checkName("Sergio Rubio ");
 
 /*
 function email(email) {
-    const a = /./
-    if (email === undefined || typeof email != "string") {
+    const a = /\./
+
+    if (typeof email != "string") {
         return console.warn("Input a string with an email in it")
-    } else if (a.test(email) === false) {
+    } else if (email.length < 1) {
         return console.warn("Don't imput an empty string")
     }
 
-    const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const regEx1 = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     const regEx2 = /\s/
 
@@ -1758,15 +1233,30 @@ function email(email) {
         return console.warn("Don't input blank spaces");
     } else if (regEx3.test(email) === true) {
         return console.warn("Input only @ . and A-z")
-    } else if (regEx.test(email) === true) {
-        return console.log("Valid email!");
+    } else if (regEx1.test(email) === true) {
+
+        //Here we check if, from the dot, the email has a normal amount of characters (.net, .com, .onion, .uk would be valid domains).
+
+        for (i = 0; i < email.length; i++) {
+            strArr = []
+            if (a.test(email.charAt(i)) === true) {
+                for (e = i; e < email.length; e++) {
+                    strArr.push(email.charAt(e))
+                }
+
+                if (strArr.length > 6 || strArr.length < 3) {
+                    return console.warn("The e-mail domain must contain between 2 and 5 characters.")
+                }
+                //console.log(strArr);
+            }
+        }
+        console.log("Valid email!");
     }
 
 }
 
+email("example@example.net");
 
-
-email("")
 
 */
 
@@ -1779,49 +1269,7 @@ email("")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1879,43 +1327,7 @@ email("")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -1977,34 +1389,7 @@ email("")
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -2018,32 +1403,29 @@ function evenUneven(arr) {
     even = []
     uneven = []
 
-    let evenObject = {
-        array: []
+    let object = {
+        evenArray: [],
+        unevenArray: []
     }
-    let unevenObject = {
-        array: []
-    }
+
 
     for (i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0) {
             even.push(arr[i]);
-            evenObject.array.push(arr[i])
+            object.evenArray.push(arr[i])
         } else {
             uneven.push(arr[i]);
-            unevenObject.array.push(arr[i])
+            object.unevenArray.push(arr[i])
         }
     }
 
     //console.log(even)
     //console.log(uneven)
-    console.log(`These are the even numbers of your array: ${evenObject.array}. These are the uneven numbers of your array: ${unevenObject.array}`)
+    console.log(`These are the even numbers of your array: ${object.evenArray}. These are the uneven numbers of your array: ${object.unevenArray}`)
 
 }
 
 evenUneven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-
-
 */
 
 
@@ -2056,44 +1438,7 @@ evenUneven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -2133,51 +1478,7 @@ bigger([7, 5, 7, 8, 6])
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//<---------------------------------------------------------->
 
 
 
@@ -2188,13 +1489,13 @@ bigger([7, 5, 7, 8, 6])
 // 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
 
 
-/* 
-let arr = ["x", 10, "x", 2, "10", 10, 10, true, true]
+/*
+let Arr = ["x", 10, "x", 2, "10", 10, 10, true, true]
 
 
-function eliminateDuplicates(arr) {
+function eliminateDuplicates(Arr) {
 
-    const result = arr.filter((value, index, self) => self.indexOf(value) === index)
+    const result = Arr.filter((value, index, self) => self.indexOf(value) === index)
     console.log(result)
 
 
@@ -2202,28 +1503,29 @@ function eliminateDuplicates(arr) {
 
 
 
-eliminateDuplicates(arr);
+eliminateDuplicates(Arr);
 
 
-function eliminateDuplicates2(arr) {
+function eliminateDuplicates2(Arr) {
 
-
-    let result = [...new Set(arr)]
+    let result = [...new Set(Arr)]
     return console.log(result)
 }
 
 
 
-eliminateDuplicates2(arr);
+eliminateDuplicates2(Arr);
+
+
 
 
 //Una forma de preguntarle al programa si hay duplicados en el array: 
 
-function hasDuplicates(arr) {
-    if (arr instanceof Array) {
-        for (let i = 0; i < arr.length - 1; ++i) {
+function hasDuplicates(Arr) {
+    if (Arr instanceof Array) {
+        for (let i = 0; i < Arr.length - 1; ++i) {
             //console.log(i)
-            if (arr.slice(i + 1).indexOf(arr[i]) !== -1) {
+            if (Arr.slice(i + 1).indexOf(Arr[i]) !== -1) {
                 return true;
 
                 //Con slice(index) creamos un array a partir de una posición determinada del anterior array. Luego preguntamos al programa: ¿cuál es el índice de arr[i]? Si da positivo, quiere decir que está en el nuevo array, ergo, está duplicado en el primero.
@@ -2236,7 +1538,7 @@ function hasDuplicates(arr) {
 }
 
 try {
-    console.log(hasDuplicates(arr));
+    console.log(hasDuplicates(Arr));
 } catch (e) {
     console.log(`Error: ${e.message}`);
 }
@@ -2245,24 +1547,242 @@ try {
 
 //Forma alternativa de eliminar duplicados: 
 
-
-function eDup(arr) {
-    console.log(arr)
-    if (arr instanceof Array) {
-        for (i = 0; i < arr.length - 1; i++) {
-            if (arr.slice(i + 1).indexOf(arr[i]) !== -1) {
-                arr.splice(i, 1);
-                i--;
-            }
+function eDup(Arr) {
+    console.log(Arr);
+    nArr = Arr;
+    if (nArr instanceof Array) {
+        for (i = 0; i < nArr.length - 1; i++) {
+            if (nArr.slice(i + 1).indexOf(nArr[i]) !== -1) { nArr.splice(i, 1), i-- }
         }
-        return arr
+        return `This is the new array without the duplicates: ${nArr}`
     } else {
         throw TypeError(`El argumento debe ser un arreglo`);
     }
 }
 
 
-console.log(eDup(arr));
-
+console.log(eDup(Arr));
 
 */
+// 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+/*
+(function pr(arr) {
+    let b = 0;
+    let i = 0;
+    arr.reduce((acc, value) => {
+        b += value
+        i++
+    }, 0);
+    return console.log(`The average is: ${b/i}`)
+}([9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 27) Programa una clase llamada Pelicula.
+
+// La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+//   - Todos los datos del objeto son obligatorios.
+//   - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+//      7 restantes números.
+//   - Valida que el título no rebase los 100 caracteres.
+//   - Valida que el director no rebase los 50 caracteres.
+//   - Valida que el año de estreno sea un número entero de 4 dígitos.
+//   - Valida que el país o paises sea introducidos en forma de arreglo.
+//   - Valida que los géneros sean introducidos en forma de arreglo.
+//   - Valida que los géneros introducidos esten dentro de los géneros aceptados*.
+//   - Crea un método estático que devuelva los géneros aceptados*.
+//   - Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+//   - Crea un método que devuelva toda la ficha técnica de la película.
+//   - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica  de cada película.
+
+// * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
+
+
+
+class film {
+    constructor(id, title, director, release, countries, genre, score) {
+        this.id = id,
+            this.title = title,
+            this.director = director,
+            this.release = release,
+            this.countries = countries,
+            this.genre = genre,
+            this.score = score;
+    }
+
+
+
+    // static id(obj) {
+    //     if (obj.id.length < 5) {
+    //         return console.log('invalid object');
+    //     }
+    // }
+
+    // id2() {
+    //     if (this.id) {
+    //         return console.log('Execution of the id2 non-static method');
+    //     }
+    // }
+
+    static validG() {
+        return "Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western"
+    }
+
+    throwData() {
+        return console.log(`Id: ${this.id}`), console.log(`Title: ${this.title}`),
+            console.log(`Director: ${this.director}`),
+            console.log(`Release: ${this.release}`),
+            console.log(`Countries: ${this.countries}`),
+            console.log(`Genre: ${this.genre}`),
+            console.log(`Score: ${this.score}`);
+    }
+}
+
+
+let I_Care_A_Lot = new film('tt9813250', 'I Care a Lot', 'J Blakeson', '2020', ['United States'], ['Comedy', 'Crime', 'Thriller'], '6.6');
+
+(function(obj) {
+    let oArr = Object.values(obj);
+    for (i = 0; i < oArr.length; ++i) {
+        if (oArr[i] === undefined) {
+            return console.log('The film must have 7 data');
+        }
+    }
+
+    (function() {
+        let rEx = /^[a-z]{2}[0-9]{7}$/;
+        if (rEx.test(oArr[0]) === false) return console.log('The IMDb ID must be inputted in this format: tt0000000');
+
+    }());
+
+    (function() {
+        let rEg = /^[\w\s]{1,100}$/;
+        if (rEg.test(oArr[1]) === false) {
+            return console.log('The title must contain a title between 1 and 100 characters.');
+        }
+    }());
+
+    (function() {
+        let rEx = /^[\w\s]{5,50}$/i;
+        if (rEx.test(oArr[2]) === false) {
+            return console.log("The director's name must contain a title between 1 and 50 characters.");
+        }
+    }());
+
+    (function() {
+        let rEx = /^(20[01][0-9]|(202[0-1]))|(189[0-9]|(19[0-9][0-9]))$/;
+        if (rEx.test(oArr[3]) === false) {
+            return console.log("The release date must be between 1890 and 2021.");
+        }
+    }());
+
+    (function() {
+
+        if (Array.isArray(oArr[4]) === false) {
+            console.log("The countries must be inputted in the form of an array");
+        }
+    }());
+
+    (function() {
+        if (Array.isArray(oArr[5]) === false) {
+            console.log('The genres must be inputted in the form of an array')
+        }
+    }());
+
+    (function() {
+        let a = []
+        let genres = [/^[Aa]ction$/, /^[Aa]dult$/, /^[Aa]ction$/, /^[Aa]nimation$/, /^[Aa]iography$/, /^[Cc]omedy$/, /^[Cc]rime$/, /^[Dd]ocumentary$/, /^[Dd]rama$/, /^[Ff]amily$/, /^[Ff]antasy$/, /^[Ff]ilm Noir$/, /^[Gg]ame-Show$/, /^[Hh]istory$/, /^[Hh]orror$/, /^[Mm]usical$/, /^[Mm]usic$/, /^[Mm]ystery$/, /^[Nn]ews$/, /^[Rr]eality-TV$/, /^[Rr]omance$/, /^[Ss]ci-Fi$/, /^[Ss]hort$/, /^[Ss]port$/, /^[Tt]alk-Show$/, /^[Tt]hriller$/, /^[Ww]ar$/, /^[Ww]estern$/];
+
+        for (i = 0; i < oArr[5].length; ++i) {
+            for (e = 0; e < genres.length; ++e) {
+                if (genres[e].test(obj.genre[i]) === true) {
+                    a.push(oArr[5][i])
+                }
+            }
+        }
+
+        if (a.length !== obj.genre.length) {
+            console.log(`The array has an invalid genre into it`);
+        }
+    }());
+
+    (function() {
+        if (/^(([0-9]|10)|([0-9][\.\'\,][0-9]))$/.test(oArr[6]) === false) {
+            console.log(`The inputted film score ${oArr[6]} is wrong`)
+        }
+    }());
+}(I_Care_A_Lot));
+
+
+
+console.log('Valid genres: ', film.validG());
+I_Care_A_Lot.throwData();
+//console.log(film.id(I_Care_A_Lot));
+// console.log(I_Care_A_Lot.id2());
+
+
+
+
+//   - Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de forma automatizada e imprime la ficha técnica de cada película.
+
+
+let arr = [{
+        id: "tt1853257",
+        title: "E.T",
+        director: 'J Blakeson',
+        release: '1976',
+        countries: ['United States', 'England', 'Germany'],
+        genre: ['Romance', 'Fantasy'],
+        score: '8'
+    },
+    {
+        id: "tt9813250",
+        title: "I Care a Lot",
+        director: 'J Blakeson',
+        release: '2020',
+        countries: ['United States'],
+        genre: ['Comedy', 'Crime', 'Thriller'],
+        score: '6.6'
+    },
+    {
+        id: "tt0842641",
+        title: "Rambo",
+        director: 'Charles McMillan',
+        release: '1973',
+        countries: ['United States', 'France'],
+        genre: ['Explotions', 'Action', 'Adventure'],
+        score: '8.5'
+    }
+];
+
+
+// console.clear();
+
+
+for (i = 0; i < arr.length; i++) {
+    let a = Object.values(arr[i]);
+    console.log(new film(`${a[0]}`, `${a[1]}`, `${a[2]}`, `${a[3]}`, `${a[4]}`, `${a[5]}`, `${a[6]}`).throwData());
+}

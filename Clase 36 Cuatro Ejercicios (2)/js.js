@@ -594,94 +594,39 @@ binToDec("1010111");
 
 //Regular Expressions: https://youtu.be/aPkBloR9MEI?list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 
 
 function decToBin(num) {
 
-    //Podríamos hacer una calculadora de Decimal a binario con decimales: https://www.youtube.com/watch?v=DG009wcbBw4
-
-    //Vamos a validar que no es un número binario. No tiene lógica, ya que estrictamente podemos pasar 100101, por ejemplo, a binario (100.101 = 11000011100000101). Aun así, para que sirva de ejemplo, así lo haríamos con expresiones regulares:
-
-
-
-
-
-    let expReg0101 = /0101/g
-    let expReg1010 = /1010/g
-
-    console.log(expReg0101.test(num))
-    console.log(expReg1010.test(num))
-
-    if (expReg0101.test(num) === true || expReg1010.test(num) === true) {
-        console.log(`${num} must be a decimal number`)
-    }
-
-
-
-
-
-
-
-
     let x = num / 2
-    let multiplied = []
+    let divided = []
     let binOutput = []
-    for (let i = num; i > 1; i = i / 2) {
-        multiplied.unshift(i)
-
+    for (i = num; i > 1; i = i / 2) {
+        divided.push(i)
     }
 
-    multiplied.reverse()
+    for (i = 0; i < divided.length; i++) {
 
-    for (i = 0; i < multiplied.length; i++) {
-
-        if (Math.floor(multiplied[i]) % 2 === 0) {
-            binOutput.unshift(0)
-        } else {
+        if (Math.floor(divided[i]) % 2 != 0) {
             binOutput.unshift(1)
+        } else {
+            binOutput.unshift(0)
         }
     }
 
-    console.log(multiplied)
-    console.log(binOutput)
-
-    //Para comprobar que el número introducido es positivo (No sería necesario dada la posterior validación mediante RegularExpressions): 
-
-    if (Math.sign(num) === -1) {
-        console.clear();
-        console.log(`${num} is a negative number. You have to input a positive one.`)
-    }
-    // console.log(multiplied[1]) 
-
-
-    //Vamos a comprobar si hay caracteres extraños introducidos: 
-
-    let expRegExtraña = /[.*+\-?^${}()|[\]\\]/g
-    if (expRegExtraña.test(num) === true) {
-        console.clear();
-        console.log(`You inputted: ${num} Do not input any character that is not decimal.`)
-    }
+    console.log("Divided: ", divided)
+    console.log("binOutput: ", binOutput)
 
 }
 
 
-decToBin(87);
+decToBin(53);
+
+
+
+
+
 
 
 

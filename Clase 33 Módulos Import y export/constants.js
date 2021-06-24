@@ -1,27 +1,15 @@
 export const PI = Math.PI;
+export const user = "Tony";
 
-export let usuario = "Sergio";
-let password = "8759"
+export default function hi(hi) {
+    console.log(`Hola Módulos +ES6`)
+}
+//There can't be two elements exported by default. To use the default export, you need to set the variable first, unlike the common type of export.
 
+export class greeting {
+    constructor() {
+        console.log("Hola Clases +ES6")
+    }
 
-//Para exportar funciones por defecto:
-
-// export default function saludar() {
-//     console.log("Hola módulos +ES6")
-// }
-
-//Esto no funciona con var, const y let, si no has declarado antes dicha variable o constante:
-// let numberLet = 10;
-// export default numberLet;
-
-
-//Con las clases se produce hoisting, por lo que no hay que declararlas primero:
-
-// export default function buenasTardes() {
-//     console.log("Buenas tardes")
-// }
-
-export default class clase {
-    constructor() { console.log("Esto es una clase"); }
 
 }

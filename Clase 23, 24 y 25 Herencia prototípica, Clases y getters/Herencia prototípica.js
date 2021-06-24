@@ -143,3 +143,5 @@ Cat.prototype.rumiar = function() {
 
 const Helen = new Cat("Helen", "Female", "5kg")
 Helen.maullar(), Helen.rumiar();
+
+console.log(Helen)

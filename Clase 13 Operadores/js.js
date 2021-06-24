@@ -20,5 +20,13 @@ i = i + 2;
 i += 3;
 
 i++
+console.log(i);
 i--
+console.log(i);
+
+
+
+++i
+console.log(i);
+--i
 console.log(i);

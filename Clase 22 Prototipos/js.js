@@ -45,20 +45,20 @@ function Animal(nombre, genero) {
     this.genero = genero;
 
     //Métodos
-    this.sonar() = function() {
+    this.sonar = function() {
         document.write("Hago sonidos porque estoy vivo.")
     }
 
 
     // Recuerda, si usáramos arrow functions, no podríamos hacer uso del objeto this
 
-    this.saludar() = function() {
+    this.saludar = function() {
         console.log(`Hola me llamo ${this.nombre}`)
     }
 }
 
-const bruno = new Animal("Snoopy", "Macho"),
-    sophie = new Animal("sophie", "Hembra");
+const bruno = new Animal("Bruno", "Macho"),
+    sophie = new Animal("Sophie", "Hembra");
 
 console.log(bruno, sophie);
 
@@ -89,8 +89,8 @@ Animal.prototype.saludar = function() {
     console.log(`Hola me llamo ${this.nombre}`)
 }
 
-const bruno = new Animal("Snoopy", "Macho"),
-    sophie = new Animal("sophie", "Hembra");
+const bruno = new Animal("Bruno", "Macho"),
+    sophie = new Animal("Sophie", "Hembra");
 
 console.log(bruno, sophie);
 

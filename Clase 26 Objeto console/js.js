@@ -45,7 +45,6 @@ console.log("Quinto ejemplo de texto");
 console.groupEnd();
 
 
-
 console.groupCollapsed("Ejemplos de texto en la consola");
 console.log("Primer ejemplo de texto");
 console.log("Segundo ejemplo de texto");
