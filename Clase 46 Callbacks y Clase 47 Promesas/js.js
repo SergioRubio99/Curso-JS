@@ -43,6 +43,7 @@ console.log("Synchronous invokes");
 //     console.log('logCall was called back.')
 // }
 
+/*
 setTimeout(function() {
     console.log('logCall was called back after timeout.')
 }, 1500);;
@@ -96,4 +97,43 @@ determineTotal = function() {
 
 determineTotal();
 
-//PROMESAS:
+*/
+//PROMISES:
+
+
+function squarePromise(value) {
+    if (typeof value !== "number") return Promise.reject(`Error, the inputted value: ${value} is not a number`);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({
+                value: value,
+                result: value * value,
+            });
+        }, 0 | Math.random() * 1000);
+    })
+};
+
+squarePromise(2).then(obj => {
+        //console.log(obj)
+        console.log('Inicio Promise');
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(1);
+    }).then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(2);
+    }).then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise("abcd");
+    }).then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(4);
+    }).then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(5);
+    }).then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+
+        console.log('End of the promise')
+
+    })
+    .catch(err => console.error(err));

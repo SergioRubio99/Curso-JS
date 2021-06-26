@@ -1,5 +1,5 @@
 // try {
-//     console.log("We add here the codigo to evaluate");
+//     console.log("We add here the code to evaluate");
 //     console.log("Second try message");
 //     variableInexistente;
 // } catch (error) {
@@ -13,8 +13,6 @@
 try {
     let num = 4;
     if (isNaN(num)) throw new Error("The inputted character is not a number, try again.");
-
-
     console.log(num * num);
 } catch (error) {
     console.warn(error.message);

@@ -37,13 +37,13 @@ ws.add(value2);
 ws.add(value3);
 console.log(ws);
 
-// setInterval(() => console.log(ws), 1000);
+setInterval(() => console.log(ws), 1000);
 
 setTimeout(() => {
     value1 = null;
     value2 = null;
     value3 = null;
-}, 6000);
+}, 3000);
 
 
 //Tienes que tener activada la opción "garbage collector" en la pestaña de Memoria, en el navegador, para que esto funcione. Al haberse declarado nulas las variables, no tiene sentido que sigan en memoria. Esto sirve para evitar el Memory Leak, cuando tienes que añadir y quitar elementos

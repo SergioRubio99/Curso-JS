@@ -23,7 +23,7 @@ console.log(PERSON[NAME])
 PERSON[SALUDAR] = function() {
     console.log(`Hi, my name is ${PERSON.NAME}, and I am a Web Developer`);
 }
-console.log(PERSON)
+console.log(PERSON);
 PERSON[SALUDAR]();
 
 for (let PROPERTY in PERSON) {
