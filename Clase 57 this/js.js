@@ -1,73 +1,63 @@
 console.log(this);
 console.log(window);
 console.log(this === window);
-console.log(typeof window);
 
-this.name = "Global context";
-console.log(this.name);
+this.addedProp = 'Global Context';
+console.log(addedProp)
+console.log(this.addedProp)
 
 function print() {
-    console.log(this.name);
+    console.log(this.addedProp)
 }
+//This function prints addedProp because we are in the general scope.
+
 print();
 
-{
-    //This is not only an object, but a block too.
-}
-
 const obj = {
-    name: "Context: object",
+    addedProp: 'First Object Context',
     print: function() {
-        console.log(this.name);
-
+        console.log(this.addedProp)
     }
 }
 
 obj.print();
 
 const obj2 = {
-    name: 'Context: 2nd object',
+    addedProp: 'Second Object Context',
+    //this print method, refers to print(), the previous global scope declared function. It will print the local scoped value, though the function comes from the global scope.
     print
 }
 
 obj2.print();
 
+
+//The arrow function elevates the scope:
 const obj3 = {
-    name: 'Context: 3rd object',
-    print
+    addedProp: 'Third Object Context',
+    print: () => {
+        console.log(this.addedProp);
+    }
 }
 
 obj3.print();
-
-const obj4 = {
-    name: 'Context: 4th object',
-    print
-}
-
-obj4.print();
-
-
-//When into an arrow function, the 'this' method doesn't generate a scope, so in this case the console will print 'Global context', not 'Context: 4th object'. It goes to the global context.
-
-const obj5 = {
-    name: 'Context: 4th object',
-    print: () => { console.log(this.name) }
-}
-
-obj5.print();
-
-
-
+//The constructor function creates its own scope:
 function Person(name) {
     this.name = name;
-    // return console.log(this.name);
-    return function() {
-            //Internally, this function didn't create a new context. You will get the 'Global context' again.
-            console.log(`${this.name}, es this.name`)
-        }
-        //The arrow function, however, operates into the context of its father element.
-    return () => console.log(this.name)
+    return console.log(this.name)
 }
 
-let Sergio = new Person("Sergio")
-Sergio()
+let jon = new Person('Jon');
+
+//This function 
+function Person2(name) {
+    this.name = name;
+    //Here we see another in-deep scope. To execute that console.log() we'd need to instanciate it outside.
+    return function() {
+        // this.name = "fdffddf";
+        console.log(this.name);
+    }
+}
+
+let Sergio = new Person2('Sergio');
+Sergio();
+//After instanciating it, we see it refers to the Global Context. It has no name property, so it goes straight to the global context.
