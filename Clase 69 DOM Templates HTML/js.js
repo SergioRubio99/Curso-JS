@@ -198,6 +198,7 @@ $div3_2.style.setProperty("background-color", "#17a8f0");
 
 
 //Let's create a <template> tag. This one isn't written into the DOM, so if you click 'Inspect element', you won't see its content. The <template> tag was meant as a reference to create future elements, like classes in object oriented programming.
+
 const $cards = document.querySelector(".cards_article"),
     $template = document.getElementById("template_card").content,
     $fragment_ = document.createDocumentFragment(),
@@ -232,4 +233,4 @@ cardContent.forEach(el => {
     $fragment.appendChild($clone);
 })
 
-$cards.appendChild($fragment)
+$cards.appendChild($fragment);

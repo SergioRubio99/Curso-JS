@@ -237,16 +237,30 @@ cardContent.forEach(el => {
 $cards.appendChild($fragment)
 
 */
-const $cards = document.querySelector(".cards");
-const $newCard = document.createElement("figure");
-const $cloneCards = $cards.cloneNode(true)
 
-$newCard.innerHTML = `<img src="https://placeimg.com/500/200/animals" alt="Animals"><figcaption>Animals</figcaption>`;
-$cards.appendChild($newCard)
-$newCard.classList.add("card");
+const $cards = document.querySelector('.cards'),
+    $newCard = document.createElement('figure'),
+    $cloneCards = $cards.cloneNode(true);
 
+
+$newCard.innerHTML = `
+    <img src='https://placeimg.com/607/200/any' alt = 'Any'>
+    <figcaption>Any</figcaption>
+`;
+$newCard.classList.add('card');
+$newCard.classList.add('card_article1');
+
+
+
+//To insert the element replacing another one:  $cards.replaceChild($newCard, $cards.children[2])
+
+// To insert the element taking another one as reference, without replacing it: $cards.insertBefore($newCard, $cards.firstElementChild)
+
+//To remove one element, from the nodeList: 
+
+
+$cards.replaceChild($newCard, $cards.children[1]);
+$cards.removeChild($cards.lastElementChild);
 $cards.insertBefore($newCard, $cards.firstElementChild);
 
-$cards.removeChild($cards.lastElementChild);
-
-document.body.appendChild($cloneCards)
+document.body.appendChild($cloneCards);

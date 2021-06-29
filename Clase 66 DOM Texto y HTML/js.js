@@ -14,12 +14,13 @@ El Modelo de Objeto de Documento (<b><i>DOM - Document Object Model </i></b>) es
 `;
 
 
-// innetText & inner HTML put the new text into the ID/Class selected.
+// innetText & inner HTML replaces the text into the ID/Class selected.
+// $whatIsDOM.innerText = text;
+
+
 $whatIsDOM.innerHTML = text;
-
-$whatIsDOM.innerText = text;
-
 $whatIsDOM.textContent = text;
 
-// outerHTML deletes the father content and puts the new text straight into the DOM.
+// outerHTML deletes the father element and puts the new text straight into the DOM. It would have put the 3 <p> into the selected <p> if we hadn't used this method. 
+
 $whatIsDOM.outerHTML = text;

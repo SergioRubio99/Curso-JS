@@ -6,7 +6,7 @@ console.log($cards.children[2]);
 console.log($cards.parentElement);
 
 
-//To select the first/last Node child:
+//To select the first or the last Node child:
 console.log($cards.firstChild);
 console.log($cards.lastChild);
 //To select the first/last element child:
@@ -17,7 +17,8 @@ console.log($cards.lastElementChild);
 console.log($cards.previousElementSibling);
 console.log($cards.nextElementSibling);
 
-//To print the closest ancestor with a specified tag:
+
+//To return the closest ancestor with a specified tag:
 console.log($cards.closest("div"));
 console.log($cards.closest("body"));
 
