@@ -1,0 +1,17 @@
+.flow-events div {
+    padding: 4em;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.one {
+    background-color: yellow;
+}
+
+.two {
+    background-color: gold;
+}
+
+.three {
+    background-color: lightyellow;
+}
