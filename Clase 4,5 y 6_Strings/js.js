@@ -17,9 +17,11 @@ console.log(
     lorem.split(),
     lorem,
     lorem.split(","),
-    lorem
-)
-
+    lorem,
+    "Blue Whale".indexOf("Blue")
+    //lastIndexOf e indexOf: https://mzl.la/2TIyzAH
+);
+//Todos los métodos: https://mzl.la/36eJCV0
 console.clear()
 
 
@@ -55,3 +57,14 @@ ul3 += "<li> Invierno</li>";
 ul3 += "</ul>"
 
 console.log(ul3)
+
+//Usar indexOf para contar occurencias de una letra en una cadena: 
+
+cuenta = 0;
+posicion = lorem.indexOf("x");
+while (posicion != -1) {
+    cuenta++;
+    posicion = lorem.indexOf("x", posicion + 1);
+};
+console.log(posicion);
+//devolverá -1

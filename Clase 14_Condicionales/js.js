@@ -54,7 +54,7 @@ let eresMayor = (edad >= 18) ?
 console.log(eresMayor)
 
 /* switch - case*/
-
+// https://mzl.la/3xm2jSl
 /*
 
 domingo - 0
@@ -67,7 +67,7 @@ sábado - 6
 
 
 */
-let dia = 6
+let dia = 2
 switch (dia) {
     case 0:
         console.log("Domingo")
@@ -92,4 +92,20 @@ switch (dia) {
         break;
     default:
         console.log("No ha introducido un número de día válido")
+}
+
+//Si olvidas un break, ejecutará la siguiente condición aunque no le toque, hasta encontrar un break. El default debe ir al final.
+
+//Una instrucción para varias condiciones: 
+var Animal = 'Jirafa';
+switch (Animal) {
+    case 'Vaca':
+    case 'Jirafa':
+    case 'Perro':
+    case 'Cerdo':
+        console.log('Este animal subirá al Arca de Noé.');
+        break;
+    case 'Dinosaurio':
+    default:
+        console.log('Este animal no lo hará.');
 }

@@ -61,3 +61,6 @@ let birthDay = new Date(1999, 9, 16);
 
 console.log(birthDay);
 //Recuerda que los meses están almacenados en un array. Por eso para octubre (mes 10), ponemos 9.
+
+var seconds = new Date().getTime() / 1000;
+console.log(seconds)

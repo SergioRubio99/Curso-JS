@@ -16,7 +16,7 @@ const $removedEvent = document.getElementById('Remove event')
 $semanticEvent.onclick = hiWorld;
 
 $semanticEvent.onclick = function(e) {
-    console.log("Semantic Handler function")
+    console.log("Semantic Handler function")1
     console.log(e);
     console.log(event);
 };

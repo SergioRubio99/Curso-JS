@@ -1,3 +1,5 @@
+//Resumen: https://bit.ly/3ytvMu2
+
 function unaFuncionQueDevuelveValor() {
     console.log("Uno");
     //return 19;
@@ -37,3 +39,12 @@ funcionExpresada()
 
 
 //Generator functions: https://mzl.la/3gWz6GK
+
+
+
+const sumaFunction = new Function('numero_1', 'numero_2',
+    'return numero_1 + numero_2'
+);
+
+// Ejecutamos nuestra función.
+console.log(sumaFunction(10, 15)) // => 25

@@ -49,7 +49,7 @@ const sergio = {
 
 //Iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties. https://mzl.la/35GJnBT
 
-
+console.clear()
 for (const propiedad in sergio) {
     console.log(`key: ${propiedad}, Value: ${sergio[propiedad]}`)
 }
