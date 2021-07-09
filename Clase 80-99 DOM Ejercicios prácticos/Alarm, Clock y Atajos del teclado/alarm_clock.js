@@ -20,7 +20,7 @@
 // console.log("Después de ejecutar el método ClearTimeout()");
 
 // clearInterval(clock);
-// console.log("Después de ejecutar el método ClearInterval()");
+// console.log("Después de ejecutar el método ClearInterval()"); 
 
 
 //CODE RELATED TO THE CLOCK AND THE ALARM:
