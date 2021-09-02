@@ -113,6 +113,10 @@ function squarePromise(value) {
     })
 };
 
+
+//When a value is not ready yet, because the mother function didn't execute yet, we use 'await' before requiring it, so the program will wait for the code of the function to be executed, and for the result of it to be provided. You can use this insied a function with a preceeding 'async' declaration. The evolution to that is the 'then()' method:
+
+
 squarePromise(2).then(obj => {
         //console.log(obj)
         console.log('Inicio Promise');
@@ -132,7 +136,6 @@ squarePromise(2).then(obj => {
         return squarePromise(5);
     }).then(obj => {
         console.log(`Promise: ${obj.value}, ${obj.result}`);
-
         console.log('End of the promise')
 
     })

@@ -297,9 +297,12 @@ reverse(str);
 // Ejercicio 6: Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2. (Acuérdate de hacer las validaciones pertinentes)
 
 
-/*
 
-let str = "Hola mundo hola mundo"
+//Vamos a crear una función que elimine los duplicados, sean cuantos sean, y aparezcan las veces que aparezcan: 
+
+
+/*
+let str = "Hola mundo mundo casa casa coche coche hola mundo"
 let emptyArr = []
 
 let expReg = /[A-Za-z]/ig
@@ -307,24 +310,27 @@ let expReg = /[A-Za-z]/ig
 if (expReg.test(str) === true) {
 
     function filter(str) {
-
+        str = str.toLowerCase();
         let arr = str.split(" ");
-        let arr2 = arr;
-        console.log(arr);
-
+        arr2 = arr;
+        let result = []
+        console.log(arr2);
+        let times = 0
         for (i = 0; i < arr.length; i++) {
-            var tempArr = []
-            tempArr.push(arr[i])
-            console.log(tempArr)
-        }
-
-        for (i = 0; i < arr.length; i++) {
-            if (tempArr[0] === arr[i]) {
-                emptyArr.push(tempArr[0])
-                console.log(emptyArr)
+            for (e = 0; e < arr2.length; e++) {
+                if (arr2[e] === arr[i]) {
+                    times++
+                    if (times > 1) {
+                        times = 0
+                        result.push(arr2[e])
+                        arr2.splice(e, 1)
+                    }
+                }
             }
         }
 
+        console.log(result)
+        console.log(arr2)
     }
     filter(str)
 
@@ -332,8 +338,8 @@ if (expReg.test(str) === true) {
 } else {
     console.warn("Input only characters")
 }
-
 */
+
 
 
 
@@ -359,54 +365,47 @@ if (expReg.test(str) === true) {
 
 // Ejercicio 7: Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
-/* 
-
-let expReg = /[A-Za-z]/ig
 
 
-let input = "salas";
-let sptArr = input.toLowerCase().split("");
-let revArr = []
-let coincidences = 0
 
-console.log(sptArr);
+// function palindrome(input) {
+
+//     let expReg = /[A-Za-z]/ig
+
+//     if (expReg.test(input) === true) {
+//         //Testeamos que no se haya introducido en la función un valor undefined:
+//         if (input === undefined) {
+//             return console.log("Don't input undefined objects")
+//         }
+//         //Cogemos el input, y lo metemos en un array. Invertimos una copia de ese array (no usamos Array.reverse() sin más, porque es un método mutante del array original. Por ello, creamos una copia del array original con Array.prototype.concat()).
+
+//         let sptArr = input.toLowerCase().split("");
+//         let revArr = [].concat(sptArr).reverse();
+//         let coincidences = 0;
+//         console.log(sptArr);
+//         console.log(revArr);
+//         //Recorremos el primer array, y chequeamos cada elemento del mismo con cada elemento del array invertido. Si hay coincidencia, sumamos a coincidences 1.
+//         for (i = 0; i < sptArr.length; i++) {
+//             if (sptArr[i] === revArr[i]) {
+//                 coincidences++
+//             }
+//         }
+//         //Si el número de coincidencias es equivalente a la longitud de sptArr, estamos ante un palíndromo. 
+//         if (coincidences === sptArr.length) {
+//             console.log("Both strings are palindromes")
+//         } else {
+//             console.log("No palindromes here")
+//         }
 
 
-if (expReg.test(input) === true) {
+//     } else {
+//         console.warn("Input a string made of characters")
+//     }
 
-    for (i = sptArr.length - 1; i >= 0; i--) {
-        revArr.push(sptArr[i])
-    }
+// }
 
-    for (i = 0; i < sptArr.length; i++) {
-        if (sptArr[i] === revArr[i]) {
-            coincidences++
-        }
-    }
+// palindrome('salas');
 
-
-    console.log(revArr)
-    console.log(coincidences)
-    console.log(sptArr.length);
-
-    setTimeout(() => {
-
-        if (coincidences === sptArr.length) {
-            console.log("Both strings are palindromes")
-        } else {
-            console.log("No palindromes here")
-        }
-
-    }, 200);
-
-} else if (input.length === 0) {
-    console.warn("Input something")
-
-} else {
-    console.warn("Input only characters")
-}
-
-*/
 
 
 
@@ -631,75 +630,25 @@ factorial(8)
 // 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
 
 
-/* 
+
 function prime(num) {
-    let nReg = /[0-9]/ig
+    let nReg = /[0-9]/ig;
 
     if (nReg.test(num) === false || Math.sign(num) === -1) {
-        console.log("Input a positive number")
+        console.log("Input a positive number");
     } else if (num === 1 || num === 2) {
-        console.log("Primo")
+        console.log("Primo");
     } else if (num === 0) {
-        console.log("0 is not a prime number")
+        console.log("0 is not a prime number");
     }
 
-    arr = []
-
-    for (i = 2; i <= num; i++) {
-        let a = num % i
-        arr.push(a)
-        console.log(a)
-        console.log(arr)
-    }
-
-    sArr = []
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] !== 0) {
-            sArr.push(arr[i])
+    for (i = 2; i < num - 1; i++) {
+        if (num % i === 0) {
+            return console.log("It's not a prime number")
         }
     }
-
-    console.log("arr", arr)
-    console.log("sArr", sArr)
-    if (sArr.length === arr.length - 1) {
-        console.log("Prime num")
-    } else {
-        console.log("Not a prime num")
-    }
-
+    return console.log("It is, indeed, a prime number")
 }
-
-prime(52343);
-
-*/
-
-
-
-/*Forma más eficiente de programarlo:*/
-
-
-/*
-function ifPrime(num) {
-
-    let a = false;
-
-    for (let i = 2; i < num; i++) {
-        if ((num % i) === 0) {
-            a = true;
-            break;
-        }
-    }
-
-    return (a) ?
-        console.log(`${num} is not a prime number`) :
-        console.log(`${num} is a prime number`)
-
-
-}
-
-ifPrime(512343)
-
-*/
 
 
 
@@ -738,7 +687,7 @@ function even_uneven(num) {
 
 
     if (wholeRegEx.test(num) === false || spcRegEx.test(num) === true || num === undefined) {
-        console.log("Input something, mothafucka")
+        console.log("Input something")
 
     } else if (isNaN(num) === true && regEx.test(num) === false) {
         console.log("Input only a number")
@@ -863,73 +812,72 @@ CtoF(222, "f");
 
 
 
-/*
+
 //dec to bin: https://www.youtube.com/watch?v=8USbTNHvQik 
-function convert(num, type) {
+// function convert(num, type) {
 
-    num = num.toString();
-    type = type.toString();
-    //We convert the values to strings because I can't test via regEx2 the num value if it's not a string.
-
-
-    let regEx1 = /^[0-9]*$/ //this regex means matching only numbers and nothing else. 
-    let regEx2 = /[2-9]/
-    if (regEx1.test(num) === false) {
-        return console.log("Input a correct value as number");
-    } else if (regEx1.test(type) === false || (type != 2 && type != 10 && type != "2" && type != "10")) {
-        return console.log("the base must be 2 or 10");
-    } else if ((type === 2 || type === "2") && regEx2.test(num) === true) {
-        console.log("If the base is 2, you must input a binary number", num);
-    }
+//     num = num.toString();
+//     type = type.toString();
+//     //We convert the values to strings because I can't test via regEx2 the num value if it's not a string.
 
 
-    if (type == 10) {
-        arr = []
-            // arr2 = []
-        let a = num //We create this variable for the for loop, because if we iterate on the "num" variable, and manage it inside the loop at the same time, the "i" variable won´t make any sense and the loop won't iterate the times needed. 
-        for (i = 0; i < a; ++i) {
+//     let regEx1 = /^[0-9]*$/ //this regex means matching only numbers and nothing else. 
+//     let regEx2 = /[2-9]/
+//     if (regEx1.test(num) === false) {
+//         return console.log("Input a correct value as number");
+//     } else if (regEx1.test(type) === false || (type != 2 && type != 10 && type != "2" && type != "10")) {
+//         return console.log("the base must be 2 or 10");
+//     } else if ((type === 2 || type === "2") && regEx2.test(num) === true) {
+//         console.log("If the base is 2, you must input a binary number", num);
+//     }
 
-            arr.push(Math.floor(num % 2))
-                // arr2.push(Math.floor(num / 2))
-            num = Math.floor(num / 2)
 
-            if (num < 1) {
-                break
-            }
-        }
+//     if (type == 10) {
+//         arr = []
+//             // arr2 = []
+//         let a = num //We create this variable for the for loop, because if we iterate on the "num" variable, and manage it inside the loop at the same time, the "i" variable won´t make any sense and the loop won't iterate the times needed. 
+//         for (i = 0; i < a; ++i) {
 
-        console.log(`This is the decimal number made binary: ${arr.reverse()}`)
-    }
+//             arr.push(Math.floor(num % 2))
+//                 // arr2.push(Math.floor(num / 2))
+//             num = Math.floor(num / 2)
 
-    //bin to dec: https://youtu.be/CUr74ebGWT8
+//             if (num < 1) {
+//                 break
+//             }
+//         }
 
-    if (type == 2) {
+//         console.log(`This is the decimal number made binary: ${arr.reverse()}`)
+//     }
 
-        arr = []
-        arr2 = []
-        arr3 = []
-        arr4 = []
-        for (i = 0; i < num.length; i++) {
-            arr.unshift(num[i])
-            arr2.push(Math.pow(2, i))
-        }
+//     //bin to dec: https://youtu.be/CUr74ebGWT8
 
-        for (i = 0; i < num.length; i++) {
-            arr3.push(arr[i] * arr2[i])
-        }
+//     if (type == 2) {
 
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+//         arr = []
+//         arr2 = []
+//         arr3 = []
+//         arr4 = []
+//         for (i = 0; i < num.length; i++) {
+//             arr.unshift(num[i])
+//             arr2.push(Math.pow(2, i))
+//         }
 
-        console.log(arr);
-        console.log(arr2)
-        console.log(`This is the binary number made decimal: ${arr3.reduce(reducer)}`)
-    }
+//         for (i = 0; i < num.length; i++) {
+//             arr3.push(arr[i] * arr2[i])
+//         }
 
-}
+//         const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-convert(1010110101010, 2);
+//         console.log(arr);
+//         console.log(arr2)
+//         console.log(`This is the binary number made decimal: ${arr3.reduce(reducer)}`)
+//     }
 
-*/
+// }
+
+// convert(1010110101010, 2);
+
 
 
 
@@ -1347,7 +1295,6 @@ email("example@example.net");
             let nArr = arr.filter(x => x > arr[i])
 
             if (nArr[1] === undefined) {
-
                 return nArr[0]
             }
 
@@ -1494,9 +1441,12 @@ let Arr = ["x", 10, "x", 2, "10", 10, 10, true, true]
 
 
 function eliminateDuplicates(Arr) {
+    mirar, para indexOf: https://mzl.la/38zywuT;
+    mirar, para Array.prototype.filter: https://mzl.la/2WRERPX;
 
-    const result = Arr.filter((value, index, self) => self.indexOf(value) === index)
-    console.log(result)
+    //Básicamente le decimos al método filter: mete en el nuevo array el valor en cuestión si arr.indexOf(value) da como resultado el índice que estamos tratando. indexOf devuelve el primer índice donde aparece el elemento value. 
+    const result = Arr.filter((value, index, arr) => arr.indexOf(value) === index);
+    console.log(result);
 
 
 }
@@ -1567,8 +1517,8 @@ console.log(eDup(Arr));
 // 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 /*
 (function pr(arr) {
-    let b = 0;
-    let i = 0;
+    let b = 0,
+    i = b;
     arr.reduce((acc, value) => {
         b += value
         i++
@@ -1760,8 +1710,8 @@ let arr = [{
     },
     {
         id: "tt9813250",
-        title: "I Care a Lot",
-        director: 'J Blakeson',
+        title: "Made Up Film",
+        director: 'Mr Noone',
         release: '2020',
         countries: ['United States'],
         genre: ['Comedy', 'Crime', 'Thriller'],

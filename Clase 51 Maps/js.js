@@ -1,3 +1,5 @@
+// Source: https://mzl.la/38PCi3z
+
 let map = new Map();
 
 //Ojo, podría poner const map = new Map();, ya que aunque estemos ante una constante, los maps son tipos de dato complejos, y el poner const significa que no va a cambiar de tipo de dato. Ahora bien, su contenido sí puede varar. Es por ello por lo que podemos usar let y const en este caso, con iguales resultados. 

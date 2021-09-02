@@ -52,7 +52,7 @@ Operaciones Síncronas y Asíncronas.
         setTimeout(function() {
             console.log('Uno');
         }, 0);
-        //Why would you execute a piece of code into a setTimeout zero? to defer something until the stack is clear. 
+        //Why would you execute a piece of code into a setTimeout zero? to defer some task until the stack is clear. 
         dos();
         console.log('Tres')
     }
